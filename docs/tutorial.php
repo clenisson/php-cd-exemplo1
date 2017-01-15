@@ -20,15 +20,15 @@ $local = "Conhecimento Digital";
 $instrutor = "Clenisson Calaça";
 $carga_horaria_em_horas = 40;
 
-# Interpolaão de variáveis - forma 1
+# Interpolação de variáveis - forma 1
 echo "O curso é $curso, ministrado por $instrutor em $local e possui $carga_horaria_em_horas horas de carga horária";
 echo "<br/>";
 
-# Interpolaão de variáveis - forma 2
+# Interpolação de variáveis - forma 2
 echo "O curso é {$curso}, ministrado por {$instrutor} em {$local} e possui {$carga_horaria_em_horas} horas de carga horária";
 echo "<br/>";
 
-# Interpolaão de variáveis - forma 3
+# Interpolação de variáveis - forma 3
 echo "O curso é ".$curso.", ministrado por ".$instrutor." em ".$local." e possui ".$carga_horaria_em_horas." horas de carga horária";
 echo "<br/>";
 

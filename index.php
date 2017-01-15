@@ -11,6 +11,33 @@ include("config/pdo.php");
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<h1>Sistema de notícias</h1>	
+	<h1>Sistema de notícias</h1>
+	<p>
+		<a href="criarNoticia.php">Criar notícia</a>
+	</p>
+
+	<?php
+	$noticias = $dbh->query("SELECT * FROM noticias");	
+	?>
+
+	<?php
+	if ($noticias->rowCount() > 0): 
+	?>
+	<ul>
+		<?php foreach ($noticias as $n): ?>
+			<li>
+				<a href="noticia.php?id=<?php echo $n['id']; ?>"><?php echo $n['titulo']; ?></a>
+			</li>
+		<?php endforeach ?>
+	</ul>	
+	<?php
+	else: 
+	?>
+
+	Infelizmente, não há notícias a serem exibidas	
+
+	<?php
+	endif
+	?>
 </body>
 </html>
