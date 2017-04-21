@@ -26,7 +26,8 @@ include("config/pdo.php");
 	<ul>
 		<?php foreach ($noticias as $n): ?>
 			<li>
-				<a href="noticia.php?id=<?php echo $n['id']; ?>"><?php echo $n['titulo']; ?></a>
+				<a href="noticia.php?id=<?php echo $n['id']; ?>" title="Clique para ver a notícia"><?php echo $n['titulo']; ?></a>
+				<a href="excluir.php?id=<?php echo $n['id']; ?>" onclick="if(!confirm('Tem certeza?')){return false;}">Excluir notícia</a>
 			</li>
 		<?php endforeach ?>
 	</ul>	
